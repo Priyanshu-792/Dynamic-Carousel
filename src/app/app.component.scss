@@ -1,0 +1,55 @@
+.carousel-container {
+    width: 100%;
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  .carousel {
+    width: 100%;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+  }
+  .carousel-caption {
+    font-family: Arial, Helvetica, sans-serif ; /* Change font family to serif */
+  }
+  .carousel-item img {
+    height: 550px; 
+  }
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* Increase the border width to make the arrows thicker */
+  border-width: 100px;
+}
+  
+  .picsum-img-wrapper {
+    margin: 10px;
+  
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+// List Group Item 
+  .list-group-item {
+    width: fit-content;
+    border: none;
+    list-style-type: disc;
+  
+    .delete-btn {
+      margin-left: 10px;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  
+  //input width for entering the url and caption
+  .form-control {
+    width: 80%;
+  }
+
+  .btn-primary{
+    margin-bottom:10px;
+  }
+  
