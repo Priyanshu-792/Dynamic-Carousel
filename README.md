@@ -1,27 +1,50 @@
-# DynamicCarousel
+# Dynamic Carousel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+This document describes the implementation of a dynamic carousel component in Angular.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The dynamic carousel allows users to display a series of images with captions in a rotating slideshow format. Users can add new slides with image URLs and captions, delete existing slides, and navigate through the slides using previous and next buttons.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Display a series of images with captions in a rotating slideshow format.
+- Add new slides dynamically with image URLs and captions.
+- Delete existing slides.
+- Navigate through slides using previous and next buttons.
+- Error handling for invalid image URLs.
+- Proper styling and formatting.
 
-## Build
+## Implementation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Component Structure
 
-## Running unit tests
+- **AppComponent:** Main component containing the carousel, list of slides, and add slide form.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Functionality
 
-## Running end-to-end tests
+- **Add Slide:** Allows users to add a new slide to the carousel by providing an image URL and caption. Validates the image URL and prevents adding empty slides.
+- **Delete Slide:** Enables users to delete an existing slide from the carousel.
+- **Slide Navigation:** Provides navigation through slides using previous and next buttons.
+- **Error Handling:** Displays an error message if an invalid image URL is provided.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Technologies Used
 
-## Further help
+- Angular framework for building the dynamic carousel component.
+- HTML and SCSS for structure and styling.
+- TypeScript for component logic and data manipulation.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usage
+
+To use the dynamic carousel component, follow these steps:
+
+1. Add the AppComponent to your Angular application.
+2. Provide the list of slides with image URLs and captions.
+3. Interact with the carousel by adding, deleting, and navigating through slides.
+
+## Example
+
+Below is an example of how the dynamic carousel component can be used:
+
+```html
+<app-root></app-root>
