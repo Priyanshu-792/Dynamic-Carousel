@@ -4,8 +4,12 @@
   <!-- Carousel Container -->
   <div class="carousel-container">
     <h1>Angular Carousel</h1>
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<!-- Timer for moving dynamic slides can be set from the attributes inside this below div, as well as pause on hovering can also be achieved by removing the data-bs-pause attribute  -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false"> 
+      <!-- this is the indicator that shows in which slide the current tab is hovering -->
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" *ngFor="let slide of slides; let i = index" [attr.data-bs-slide-to]="i" [class.active]="i === 0"></li>
+      </ol>
       <div class="carousel-inner">
         <div class="carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="i === 0">
           <img [src]="slide.imageUrl" class="d-block w-100" alt="Slide {{i}}">
@@ -17,11 +21,12 @@
       </div>
   <!-- Control Buttons -->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"> 
+        </span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"> </span>      
         <span class="visually-hidden">Next</span>
       </button>
     </div>
