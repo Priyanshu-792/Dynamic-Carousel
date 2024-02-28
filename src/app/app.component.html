@@ -1,11 +1,10 @@
 
-
 <div class="container">
   <!-- Carousel Container -->
   <div class="carousel-container">
     <h1>Angular Carousel</h1>
 <!-- Timer for moving dynamic slides can be set from the attributes inside this below div, as well as pause on hovering can also be achieved by removing the data-bs-pause attribute  -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false"> 
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500" data-bs-pause="false"> 
       <!-- this is the indicator that shows in which slide the current tab is hovering -->
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleIndicators" *ngFor="let slide of slides; let i = index" [attr.data-bs-slide-to]="i" [class.active]="i === 0"></li>
@@ -37,14 +36,14 @@
   <div class="row mt-4">
     <div class="col">
       <h3>Added Slides</h3>
-      <ul class="list-group">
+      <ol class="list-group">
         <li class="list-group-item" *ngFor="let slide of slides; let i = index">
           <div class="bullet-item">
             <span> slide {{i+1}}</span>
             <button class="delete-btn" (click)="deleteSlide(i)"><i class="fa-solid fa-trash"></i></button>
           </div>
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 

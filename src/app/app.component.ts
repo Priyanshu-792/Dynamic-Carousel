@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -38,7 +36,6 @@ export class AppComponent {
   }
   // Simple check for url is valid or not
   isValidImageUrl(url: string): boolean {
-  
-    return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
+   return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
   }
 }
